@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>CRYPTO CRAZE</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/cc_logo.png" type="image">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
+      var search = 0;
       function getCrypto(crypto){
         $.get(`https://api.coingecko.com/api/v3/coins/${crypto}?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true`)
           .then(response => {
             console.log(response);
-            $("#mini").attr(`${response.genesis_date}`)
             $("#about").html(`${response.name}`)
+            $("#mini").attr("src", response.image.large)
+            $("#mini").attr("alt", `Picture of ${response.name}`);
             $(".val").html(`${response.market_data.current_price.usd}`)
             $(".founded").html(`${response.genesis_date}`)
             $(".market_cap").html(`${response.market_cap_rank}`)
@@ -26,7 +29,15 @@
         .catch(error => console.log(error));
       }
       $("#go").click(function(){
-        getCrypto($("#crypto").val());
+        if(search == 0){
+          getCrypto($("#crypto").val());
+          search++;
+        }
+        else{
+          getCrypto($("#crypto").val());
+          search++;
+          $(".search-count").text(search);
+        }
       })
     })
   </script>
