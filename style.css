@@ -16,7 +16,7 @@ footer{
 a{
   color:white;
 }
-.container{
+body{
   width: 970px;
   min-height: 100px;
   background-color: rgb(13,7,53);
@@ -24,30 +24,36 @@ a{
   padding-bottom: 20px;
   margin-top: -50px;
 }
-.header{
+.facts{
+  color: white;
+  list-style: square;
+  line-height: 24px;
+
+}
+#header{
   width: 970px;
   display: flex;
   align-items: flex-start;
 }
-.info{
+#info{
   margin-top: -171px;
   width: 970px;
 }
-.choose{
+#choose{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 970px;
   height: 40px;
 }
-.main{
+#main{
   display:flex;
   justify-content: space-around;
   min-height: 300px;
   width: 970px;
 }
-.details{
-  height: 305px;
+#details{
+  height: 325px;
   width: 280px;
   background-color: lightslategray;
   border-style: solid;
@@ -55,7 +61,7 @@ a{
   border-radius: 10px;
   border-color: rgb(197,103,208);
 }
-.description{
+#description{
   min-height: 100px;
   width: 600px;
   background-color: lightslategray;
@@ -65,13 +71,7 @@ a{
   border-color: rgb(253,210,3);
   padding: 0px 20px 0px 20px;
 }
-.facts{
-  color: white;
-  list-style: square;
-  line-height: 24px;
-
-}
-.tinyHeader{
+#tinyHeader{
   margin-top: 20px;
   width:300px;
   font-size: 24px;
@@ -81,22 +81,26 @@ a{
   justify-content: flex-start;
   align-items: center;
 }
-.more{
-  margin: 20px;
-  color: white;
-}
-.bottom{
+#bottom{
   color: white;
   margin-top: 20px;
   width: 300px;
   margin-left: 50px;
 }
-.link{
+#link{
   vertical-align: top;
   margin-top: -30px;
 }
-.counter{
+#counter{
   margin: -10px 0px 0px 0px;
+}
+#more{
+  margin: 20px;
+  color: white;
+}
+#update{
+  color: rgb(76,73,206);
+  text-align: center;
 }
 #go{
   background: rgb(250,89,7);
