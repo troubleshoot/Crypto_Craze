@@ -29,15 +29,9 @@
         .catch(error => console.log(error));
       }
       $("#go").click(function(){
-        if(search == 0){
-          getCrypto($("#crypto").val());
-          search++;
-        }
-        else{
           getCrypto($("#crypto").val());
           search++;
           $(".search-count").text(search);
-        }
       })
     })
   </script>
@@ -87,6 +81,12 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class=bottom>
+          <p><span class="search-count">0</span> searches powered by <a href="https://www.coingecko.com/en">COINGECKO</a></p>
+          <img id="github" src="images/github.png" alt="github"><a href="https://github.com/troubleshoot" class="link">github</a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
