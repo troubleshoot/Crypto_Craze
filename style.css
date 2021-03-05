@@ -1,0 +1,100 @@
+*{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+  font-size: 64px;
+  font-weight: 600;
+  color: rgb(292,153,6);
+  margin: 55px 0px 175px -42px;
+  text-shadow: 1px 2px white;
+  text-decoration:wavy;
+  text-decoration-color: red;
+}
+.container{
+  width: 970px;
+  min-height: 100px;
+  background-color: rgb(13,7,53);
+  margin: auto;
+  padding-bottom: 20px;
+  margin-top: -50px;
+}
+.header{
+  width: 970px;
+  display: flex;
+  align-items: flex-start;
+}
+.info{
+  margin-top: -171px;
+  width: 970px;
+}
+.choose{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 970px;
+  height: 40px;
+}
+.main{
+  display:flex;
+  justify-content: space-around;
+  min-height: 300px;
+  width: 970px;
+}
+.details{
+  min-height: 100px;
+  width: 280px;
+  background-color: lightslategray;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  border-color: rgb(197,103,208);
+}
+.description{
+  min-height: 100px;
+  width: 630px;
+  background-color: lightslategray;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  border-color: rgb(253,210,3);
+}
+.facts{
+  color: white;
+  list-style: square;
+  line-height: 24px;
+
+}
+.tinyHeader{
+  margin-top: 20px;
+  width:300px;
+  font-size: 24px;
+  height: 60px;
+  display: flex;
+  color: white;
+  justify-content: flex-start;
+  align-items: center;
+}
+.more{
+  margin: 20px;
+  color: white;
+}
+#mini{
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#choose_text{
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+}
+#logo{
+  margin: 0px 100px -30px 0px;
+  width: 200px;
+  height: 200px;
+}
+#name{
+  color: red;
+  font-size: 30px;
+}
+
