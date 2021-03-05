@@ -13,17 +13,18 @@
         $.get(`https://api.coingecko.com/api/v3/coins/${crypto}?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true`)
           .then(response => {
             console.log(response);
-            $("#about").html(`${response.name}`)
+            $("#about").text(`${response.name}`)
             $("#mini").attr("src", response.image.large)
             $("#mini").attr("alt", `Picture of ${response.name}`);
-            $(".val").html(`${response.market_data.current_price.usd}`)
-            $(".founded").html(`${response.genesis_date}`)
-            $(".market_cap").html(`${response.market_cap_rank}`)
-            $(".liquidity").html(`${response.liquidity_score}`)
-            $(".coingecko").html(`${response.coingecko_rank}`)
-            $(".dev").html(`${response.developer_score}`)
-            $(".upvote").html(`${response.sentiment_votes_up_percentage}`)
-            $(".downvote").html(`${response.sentiment_votes_down_percentage}`)
+            $(".val").text(`${response.market_data.current_price.usd}`)
+            $(".founded").text(`${response.genesis_date}`)
+            $(".market_cap").text(`${response.market_cap_rank}`)
+            $(".liquidity").text(`${response.liquidity_score}`)
+            $(".coingecko").text(`${response.coingecko_rank}`)
+            $(".dev").text(`${response.developer_score}`)
+            $(".upvote").text(`${response.sentiment_votes_up_percentage}`)
+            $(".downvote").text(`${response.sentiment_votes_down_percentage}`)
+            $("#update").text(`${response.last_updated}`)
             $(".more").html(`${response.description.en}`)
           })
         .catch(error => console.log(error));
@@ -49,60 +50,59 @@
   </script>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <img id="logo" src="images/cc_logo.png" alt="cc_logo">
-        <h1><span style="color:rgb(208,116,233);">CR</span><span style="color:rgb(137,76,212);">YP</span><span style="color:rgb(76,73,206);">TO</span> <span style="color:rgb(253,214,1);">CR</span><span style="color:rgb(253,133,4);">A</span><span style="color:rgb(250,89,7);">ZE</span></h1>
-      </div>
-      <div class="info">
-        <div class="choose">
-          <label for="crypto" id=choose_text>CHOOSE A CRYPTO</label>
-          <select name="crypto" id="crypto">
-            <option value="bitcoin">BTC</option>
-            <option value="ethereum">ETH</option>
-            <option value="litecoin">LTC</option>
-            <option value="dogecoin">DOGE</option>
-            <option value="chainlink">LINK</option>
-            <option value="stellar">XLM</option>
-            <option value="uniswap">UNI</option>
-            <option value="cosmos">ATOM</option>
-            <option value="monero">XMR</option>
-            <option value="tron">TRX</option>
-            <option value="tether">USDT</option>
-            <option value="polkadot">DOT</option>
-            <option value="iota">MIOTA</option>
-            <option value="tezos">XTZ</option>
-          </select> 
-          <button id="go">GO</button>
-        </div>
-        <div class=main>
-          <div class=details>
-            <div class=tinyHeader>
-              <img id=mini src="images/cc_logo.png" alt="mini">
-              <h2 id=about>Crypto</h2>
-            </div>
-            <ul>
-              <li class=facts>Current Value: $<span class="val">0000</span> USD</li>
-              <li class=facts>Founded: <span class="founded">0000-00-00</span></li>
-              <li class=facts>Market Cap Rank: <span class="market_cap">0</span></li>
-              <li class=facts>Liquidity Value: <span class="liquidity">00.000</span></li>
-              <li class=facts>COINGECKO Score: <span class="coingecko">00.000</span></li>
-              <li class=facts>DEV Score: <span class="dev">000.000</span></li>
-              <li class=facts>Upvotes: <span class="upvote">00.00</span>%</li>
-              <li class=facts>Downvotes: <span class="downvote">00.00</span>%</li>
-            </ul>
-          </div>
-          <div class=description>
-            <p>          <span class=more>Please select a cryptocurrency to get started...</span></p>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div class=bottom>
-          <p class="counter"><span class="search-count">0</span> searches powered by <a href="https://www.coingecko.com/en" >coingecko</a></p>
-          <img id="github" src="images/github.png" alt="github"><a href="https://github.com/troubleshoot" class="link">github</a>
-        </div>
-      </footer>
+    <div class="header">
+      <img id="logo" src="images/cc_logo.png" alt="cc_logo">
+      <h1><span style="color:rgb(208,116,233);">CR</span><span style="color:rgb(137,76,212);">YP</span><span style="color:rgb(76,73,206);">TO</span> <span style="color:rgb(253,214,1);">CR</span><span style="color:rgb(253,133,4);">A</span><span style="color:rgb(250,89,7);">ZE</span></h1>
     </div>
+    <div class="info">
+      <div class="choose">
+        <label for="crypto" id=choose_text>CHOOSE A CRYPTO</label>
+        <select name="crypto" id="crypto">
+          <option value="bitcoin">BTC</option>
+          <option value="ethereum">ETH</option>
+          <option value="litecoin">LTC</option>
+          <option value="dogecoin">DOGE</option>
+          <option value="chainlink">LINK</option>
+          <option value="stellar">XLM</option>
+          <option value="uniswap">UNI</option>
+          <option value="cosmos">ATOM</option>
+          <option value="monero">XMR</option>
+          <option value="tron">TRX</option>
+          <option value="tether">USDT</option>
+          <option value="polkadot">DOT</option>
+          <option value="iota">MIOTA</option>
+          <option value="tezos">XTZ</option>
+        </select> 
+        <button id="go">GO</button>
+      </div>
+      <div class=main>
+        <div class=details>
+          <div class=tinyHeader>
+            <img id=mini src="images/cc_logo.png" alt="mini">
+            <h2 id=about>Crypto</h2>
+          </div>
+          <ul>
+            <li class=facts>Current Value: $<span class="val">0000</span> USD</li>
+            <li class=facts>Founded: <span class="founded">0000-00-00</span></li>
+            <li class=facts>Market Cap Rank: <span class="market_cap">0</span></li>
+            <li class=facts>Liquidity Value: <span class="liquidity">00.000</span></li>
+            <li class=facts>COINGECKO Score: <span class="coingecko">00.000</span></li>
+            <li class=facts>DEV Score: <span class="dev">000.000</span></li>
+            <li class=facts>Upvotes: <span class="upvote">00.00</span>%</li>
+            <li class=facts>Downvotes: <span class="downvote">00.00</span>%</li>
+          </ul>
+          <p id="update"></p>
+        </div>
+        <div class=description>
+          <p>          <span class=more>Please select a cryptocurrency to get started...</span></p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class=bottom>
+        <p class="counter"><span class="search-count">0</span> searches powered by <a href="https://www.coingecko.com/en" >coingecko</a></p>
+        <img id="github" src="images/github.png" alt="github"><a href="https://github.com/troubleshoot" class="link">github</a>
+      </div>
+    </footer>
   </body>
 </html>
