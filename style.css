@@ -17,7 +17,7 @@ p{
   margin: -10px 0px 0px 0px;
 }
 a{
-  color: lightslategray;
+  color:white;
 }
 .container{
   width: 970px;
@@ -50,7 +50,7 @@ a{
   width: 970px;
 }
 .details{
-  min-height: 100px;
+  height: 305px;
   width: 280px;
   background-color: lightslategray;
   border-style: solid;
@@ -100,7 +100,12 @@ a{
 #mini{
   width: 50px;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 5px;
+  background-color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 30px;
+  border-color: rgb(197,103,208);
 }
 #github{
   width: 20px;
