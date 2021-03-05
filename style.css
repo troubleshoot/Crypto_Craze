@@ -8,6 +8,17 @@ h1{
   margin: 55px 0px 175px -42px;
   text-shadow: 1px 2px white;
 }
+footer{
+  display: flex;
+  justify-content: center;
+  align-content: middle;
+}
+p{
+  margin: -10px 0px 0px 0px;
+}
+a{
+  color: lightslategray;
+}
 .container{
   width: 970px;
   min-height: 100px;
@@ -76,10 +87,27 @@ h1{
   margin: 20px;
   color: white;
 }
+.bottom{
+  color: white;
+  margin-top: 20px;
+  width: 300px;
+  margin-left: 50px;
+}
+.link{
+  vertical-align: top;
+  margin-top: -30px;
+}
 #mini{
   width: 50px;
   margin-left: 20px;
   margin-right: 20px;
+}
+#github{
+  width: 20px;
+  height: 20px;
+  margin-left: 90px;
+  margin-right: 5px;
+
 }
 #choose_text{
   color: white;
